@@ -34,6 +34,14 @@
         <div id="metodo4">METODO 4</div>
         </div>
     </div>
+    <div id="metodo1div">
+        <h1>METODO 1</h1>
+        <textarea name="texto" id="txt" cols="30" rows="10">
+          
+        </textarea>
+        <button id="calcular1">CALCULAR LEGIBILIDADE</button>
+        <button id="voltar">VOLTAR</button>
+    </div>
     <script>
         document.addEventListener("DOMContentLoaded",function(){
             const content = document.getElementById("content")
@@ -41,11 +49,29 @@
             const metodo2 = document.getElementById("metodo2")
             const metodo3 = document.getElementById("metodo3")
             const metodo4 = document.getElementById("metodo4")
+            const calcular1 = document.getElementById("calcular1")
+            const voltar = document.getElementById("voltar")
+
         })
         metodo1.addEventListener("click",function(){
-            content.style.display = "None"
-            metodo1.style.display = "Flex"
+            content.style.display = 'None'
+            document.getElementById("metodo1div").style.opacity = 1
+            document.getElementById("metodo1div").style.transform = "translateX(70%)"
 
+        })
+        voltar.addEventListener("click",function(){
+            document.getElementById("metodo1div").style.transform = "translateX(-70px)"
+            document.getElementById("metodo1div").style.opacity = 0
+            content.style.display = "Flex"
+            
+        })
+        calcular1.addEventListener("click",function(){
+            const texto = document.getElementById("txt")
+            if(texto.value){
+                
+            }else{
+                alert("digite alguma coisa")
+            }
         })
     </script>
     
