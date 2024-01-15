@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGIBILIDADE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <a href=""><img src="logo.png" alt="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="">INÍCIO</a></li>
+                <li><a href="">QUEM SOMOS</a></li>
+                <li><a href="">CONTATO</a></li>
+                <li><a href="">DOAR</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+        <header>
+            <h1>
+                SELECIONE O MÉTODO
+            </h1>
+        </header>
+        <div id="metodos">
+        <div id="metodo1">METODO 1</div>
+        <div id="metodo2">METODO 2</div>
+        <div id="metodo3">METODO 3</div>
+        <div id="metodo4">METODO 4</div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            const content = document.getElementById("content")
+            const metodo1 = document.getElementById("metodo1")
+            const metodo2 = document.getElementById("metodo2")
+            const metodo3 = document.getElementById("metodo3")
+            const metodo4 = document.getElementById("metodo4")
+        })
+        metodo1.addEventListener("click",function(){
+            content.style.display = "None"
+            metodo1.style.display = "Flex"
+
+        })
+    </script>
+    
+</body>
+</html>
