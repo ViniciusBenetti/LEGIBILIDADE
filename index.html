@@ -6,18 +6,18 @@
     <title>LEGIBILIDADE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header id="header">
-        <a href=""><img src="logo.png" alt="logo"></a>
+        <a href="index.html"><img src="logo.png" alt="logo"></a>
         <nav>
             <ul>
-                <li><a href="">INÍCIO</a></li>
-                <li><a href="">QUEM SOMOS</a></li>
-                <li><a href="">CONTATO</a></li>
-                <li><a href="">DOAR</a></li>
+                <li><a href="index.html">INÍCIO</a></li>
+                <li><a href="sobrenos.html">QUEM SOMOS</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+                <li><a href="doar.html">DOAR</a></li>
             </ul>
         </nav>
     </header>
@@ -36,11 +36,35 @@
     </div>
     <div id="metodo1div">
         <h1>METODO 1</h1>
-        <textarea name="texto" id="txt" cols="30" rows="10">
+        <textarea name="texto" id="txt1" cols="30" rows="10">
           
         </textarea>
         <button id="calcular1">CALCULAR LEGIBILIDADE</button>
-        <button id="voltar">VOLTAR</button>
+        <a href="#"><button id="voltar">VOLTAR</button></a>
+    </div>
+    <div id="metodo2div">
+        <h1>METODO 2</h1>
+        <textarea name="texto" id="txt2" cols="30" rows="10">
+          
+        </textarea>
+        <button id="calcular2">CALCULAR LEGIBILIDADE</button>
+        <a href="#"><button id="voltar">VOLTAR</button></a>
+    </div>
+    <div id="metodo3div">
+        <h1>METODO 3</h1>
+        <textarea name="texto" id="txt3" cols="30" rows="10">
+          
+        </textarea>
+        <button id="calcular3">CALCULAR LEGIBILIDADE</button>
+        <a href="#"><button id="voltar">VOLTAR</button></a>
+    </div>
+    <div id="metodo4div">
+        <h1>METODO 4</h1>
+        <textarea name="texto" id="txt4" cols="30" rows="10">
+          
+        </textarea>
+        <button id="calcular4">CALCULAR LEGIBILIDADE</button>
+        <a href="#"><button id="voltar">VOLTAR</button></a>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded",function(){
@@ -50,28 +74,114 @@
             const metodo3 = document.getElementById("metodo3")
             const metodo4 = document.getElementById("metodo4")
             const calcular1 = document.getElementById("calcular1")
+            const calcular2 = document.getElementById("calcular2")
+            const calcular3 = document.getElementById("calcular3")
+            const calcular4 = document.getElementById("calcular4")
             const voltar = document.getElementById("voltar")
+            const metodo1div = document.getElementById("metodo1div")
+            const metodo2div = document.getElementById("metodo2div")
+            const metodo3div = document.getElementById("metodo3div")
+            const metodo4div = document.getElementById("metodo4div")
 
         })
+
+        window.addEventListener("scroll",function(){
+            var posicao = window.scrollY || window.pageYOffset
+            metodo1div.style.transform = "translateY(0px)"
+            metodo1div.style.opacity = 0;
+            metodo2div.style.transform = "translateY(0px)"
+            metodo2div.style.opacity = 0;
+            metodo3div.style.transform = "translateY(0px)"
+            metodo3div.style.opacity = 0;
+            metodo4div.style.transform = "translateY(0px)"
+            metodo4div.style.opacity = 0;
+
+            if(posicao > 600 && posicao < 1000){
+                metodo1div.style.transform = "translateY(-50px)"
+                metodo1div.style.opacity = 1;
+            }
+            else if(posicao > 1300 && posicao < 1900){
+                metodo2div.style.transform = "translateY(-50px)"
+                metodo2div.style.opacity = 1;
+            }
+            else if(posicao > 2200 && posicao < 2600){
+                metodo3div.style.transform = "translateY(-50px)"
+                metodo3div.style.opacity = 1;
+            }   
+            else if(posicao > 2900){
+                metodo4div.style.transform = "translateY(-50px)"
+                metodo4div.style.opacity = 1;
+
+            }
+        })
+        
         metodo1.addEventListener("click",function(){
-            content.style.display = 'None'
-            document.getElementById("metodo1div").style.opacity = 1
-            document.getElementById("metodo1div").style.transform = "translateX(70%)"
+            window.scrollTo({
+                top: 700,
+                behavior: 'smooth' 
+            });
+
+        })
+        metodo2.addEventListener("click",function(){
+            window.scrollTo({
+                top: 1500,
+                behavior: 'smooth' 
+            });
+
+
+        })
+        metodo3.addEventListener("click",function(){
+            window.scrollTo({
+                top: 2300,
+                behavior: 'smooth' 
+            });
+
+        })
+        metodo4.addEventListener("click",function(){
+            window.scrollTo({
+                top: 3100,
+                behavior: 'smooth' 
+            });
 
         })
         voltar.addEventListener("click",function(){
-            document.getElementById("metodo1div").style.transform = "translateX(-70px)"
-            document.getElementById("metodo1div").style.opacity = 0
-            content.style.display = "Flex"
+   
             
         })
         calcular1.addEventListener("click",function(){
-            const texto = document.getElementById("txt")
+            const texto = document.getElementById("txt1")
             if(texto.value){
                 
             }else{
                 alert("digite alguma coisa")
             }
+        })
+        calcular2.addEventListener("click",function(){
+            const texto = document.getElementById("txt2")
+            if(texto.value){
+                
+            }else{
+                alert("digite alguma coisa")
+            }
+
+        })
+        calcular3.addEventListener("click",function(){
+            const texto = document.getElementById("txt3")
+            if(texto.value){
+                
+            }else{
+                alert("digite alguma coisa")
+            }
+
+        })
+        calcular4.addEventListener("click",function(){
+            const texto = document.getElementById("txt4")
+            if(texto.value){
+                
+            }else{
+                alert("digite alguma coisa")
+            }
+
         })
     </script>
     
