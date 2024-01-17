@@ -39,7 +39,7 @@
         <textarea name="texto" id="txt1" cols="30" rows="10">
           
         </textarea>
-        <p id="saida1">ola</p>
+        <p id="saida1"></p>
         <button id="calcular1">CALCULAR LEGIBILIDADE</button>
         <a href="#"><button id="voltar">VOLTAR</button></a>
     </div>
@@ -48,7 +48,7 @@
         <textarea name="texto" id="txt2" cols="30" rows="10">
           
         </textarea>
-        <p id="saida2">ola</p>
+        <p id="saida2"></p>
         <button id="calcular2">CALCULAR LEGIBILIDADE</button>
         <a href="#"><button id="voltar">VOLTAR</button></a>
     </div>
@@ -57,7 +57,7 @@
         <textarea name="texto" id="txt3" cols="30" rows="10">
           
         </textarea>
-        <p id="saida3">ola</p>
+        <p id="saida3"></p>
         <button id="calcular3">CALCULAR LEGIBILIDADE</button>
         <a href="#"><button id="voltar">VOLTAR</button></a>
     </div>
@@ -66,7 +66,7 @@
         <textarea name="texto" id="txt4" cols="30" rows="10">
           
         </textarea>
-        <p id="saida4">ola</p>
+        <p id="saida4"></p>
         <button id="calcular4">CALCULAR LEGIBILIDADE</button>
         <a href="#"><button id="voltar">VOLTAR</button></a>
     </div>
@@ -158,11 +158,11 @@
                     headers: {
                         'Content-Type': 'text/plain',
                     },
-                    body: texto,
+                    body: texto.value,
                 })
                 .then(response => response.text())
                 .then(data =>{
-                    saida.innerHTML = data
+                    saida.innerHTML = decodeURIComponent(data)
                 })
                 .catch(error => {
                     alert("erro em requisição")
@@ -181,11 +181,11 @@
                     headers: {
                         'Content-Type': 'text/plain',
                     },
-                    body: texto,
+                    body: texto.value,
                 })
                 .then(response => response.text())
                 .then(data =>{
-                    saida.innerHTML = data
+                    saida.innerHTML = decodeURIComponent(data)
                 })
                 .catch(error => {
                     alert("erro em requisição")
@@ -204,11 +204,11 @@
                     headers: {
                         'Content-Type': 'text/plain',
                     },
-                    body: texto,
+                    body: texto.value,
                 })
                 .then(response => response.text())
                 .then(data =>{
-                    saida.innerHTML = data
+                    saida.innerHTML = decodeURIComponent(data)
                 })
                 .catch(error => {
                     alert("erro em requisição")
@@ -227,11 +227,11 @@
                     headers: {
                         'Content-Type': 'text/plain',
                     },
-                    body: texto,
+                    body: texto.value,
                 })
                 .then(response => response.text())
                 .then(data =>{
-                    saida.innerHTML = data
+                    saida.innerHTML = decodeURIComponent(data)
                 })
                 .catch(error => {
                     alert("erro em requisição")
