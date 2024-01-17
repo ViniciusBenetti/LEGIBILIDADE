@@ -39,6 +39,7 @@
         <textarea name="texto" id="txt1" cols="30" rows="10">
           
         </textarea>
+        <p id="saida1">ola</p>
         <button id="calcular1">CALCULAR LEGIBILIDADE</button>
         <a href="#"><button id="voltar">VOLTAR</button></a>
     </div>
@@ -47,6 +48,7 @@
         <textarea name="texto" id="txt2" cols="30" rows="10">
           
         </textarea>
+        <p id="saida2">ola</p>
         <button id="calcular2">CALCULAR LEGIBILIDADE</button>
         <a href="#"><button id="voltar">VOLTAR</button></a>
     </div>
@@ -55,6 +57,7 @@
         <textarea name="texto" id="txt3" cols="30" rows="10">
           
         </textarea>
+        <p id="saida3">ola</p>
         <button id="calcular3">CALCULAR LEGIBILIDADE</button>
         <a href="#"><button id="voltar">VOLTAR</button></a>
     </div>
@@ -63,6 +66,7 @@
         <textarea name="texto" id="txt4" cols="30" rows="10">
           
         </textarea>
+        <p id="saida4">ola</p>
         <button id="calcular4">CALCULAR LEGIBILIDADE</button>
         <a href="#"><button id="voltar">VOLTAR</button></a>
     </div>
@@ -144,13 +148,25 @@
             });
 
         })
-        voltar.addEventListener("click",function(){
-   
-            
-        })
+
         calcular1.addEventListener("click",function(){
             const texto = document.getElementById("txt1")
+            const saida = document.getElementById("saida1")
             if(texto.value){
+                fetch("https://vinix-restful.glitch.me/leiturabilidade",{
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'text/plain',
+                    },
+                    body: texto,
+                })
+                .then(response => response.text())
+                .then(data =>{
+                    saida.innerHTML = data
+                })
+                .catch(error => {
+                    alert("erro em requisição")
+                })
                 
             }else{
                 alert("digite alguma coisa")
@@ -158,8 +174,22 @@
         })
         calcular2.addEventListener("click",function(){
             const texto = document.getElementById("txt2")
+            const saida = document.getElementById("saida2")
             if(texto.value){
-                
+                fetch("https://vinix-restful.glitch.me/leiturabilidade",{
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'text/plain',
+                    },
+                    body: texto,
+                })
+                .then(response => response.text())
+                .then(data =>{
+                    saida.innerHTML = data
+                })
+                .catch(error => {
+                    alert("erro em requisição")
+                })
             }else{
                 alert("digite alguma coisa")
             }
@@ -167,8 +197,22 @@
         })
         calcular3.addEventListener("click",function(){
             const texto = document.getElementById("txt3")
+            const saida = document.getElementById("saida3")
             if(texto.value){
-                
+                fetch("https://vinix-restful.glitch.me/leiturabilidade",{
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'text/plain',
+                    },
+                    body: texto,
+                })
+                .then(response => response.text())
+                .then(data =>{
+                    saida.innerHTML = data
+                })
+                .catch(error => {
+                    alert("erro em requisição")
+                })
             }else{
                 alert("digite alguma coisa")
             }
@@ -176,8 +220,22 @@
         })
         calcular4.addEventListener("click",function(){
             const texto = document.getElementById("txt4")
+            const saida = document.getElementById("saida4")
             if(texto.value){
-                
+                fetch("https://vinix-restful.glitch.me/leiturabilidade",{
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'text/plain',
+                    },
+                    body: texto,
+                })
+                .then(response => response.text())
+                .then(data =>{
+                    saida.innerHTML = data
+                })
+                .catch(error => {
+                    alert("erro em requisição")
+                })
             }else{
                 alert("digite alguma coisa")
             }

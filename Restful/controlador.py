@@ -6,10 +6,8 @@ lib = ctypes.CDLL("Restful/funcoes.so")
 lib.gradeC.argtypes = [ctypes.c_char_p]
 lib.gradeC.restype = ctypes.c_char_p
 
-resultado = lib.gradeC("hi i'm novice to programming".encode("utf-8"))
+resultado = lib.gradeC("hi,i'm novice to programming".encode("utf-8"))
 legibilidade_str = resultado.decode("utf-8")
 
-def rota():
-    return legibilidade_str
-
-api = "ladrao de api"
+print(legibilidade_str)
+    
